@@ -1,0 +1,796 @@
+ /*Basic styling*/
+
+* {
+    margin: 0;
+}
+
+body {
+  background-color: #F7F7F7;
+  color: #363636;
+}
+
+h1,h2,h3,h4 {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
+ h1 {
+    font-size: 32px;
+ }
+
+ h2 {
+    font-size: 28px;
+ }
+
+ p {
+    font-family: 'Roboto', sans-serif;
+    line-height: 150%;
+    font-size: 16px;
+ }
+ 
+ /* Nav meny */
+
+ nav {
+    top: 0;
+    left: 0;
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #363636;
+    width: 100%;
+    transition: all 500ms ease-in-out;
+    z-index: 999;
+  }
+
+  .scroll-down nav {
+    position: fixed;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  .scroll-up nav {
+    position: fixed;
+  }
+
+  a {
+    text-decoration: none;
+    color: #F7F7F7;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .current {
+    text-decoration: underline;
+  }
+
+
+  .logo {
+    font-size: 20px;
+  }
+
+
+  nav ul {
+    padding-left: 0px;
+  }
+
+
+  /* Mobil menu */
+
+  .menu {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+
+  .menu li a {
+    display: block;
+    padding: 1em 1em;
+  }
+
+
+  .toggle {
+    order: 1;
+    font-size: 20px; /*Størrelse på hamburger ikon*/
+  }
+
+
+  .item {
+    order: 2;
+    width: 100%;
+    text-align: center;
+    display: none; /*Her skjules menyen*/
+    
+  }
+
+
+  .active .item {
+    display: block; /*Her vises menuen når den klikkes for å bli aktiv*/
+  }
+
+  /*Hele headeren*/
+
+  header {
+    background-color: #363636;
+    color: #F7F7F7;
+  }
+  
+  .landing {
+    padding: 2em 1em;
+    line-height: 300%;
+    text-align: center;
+    height: 100vh;
+  }
+
+  .bilde_landing {
+    object-fit: contain;
+    height: 100%;
+  }
+
+  .logo_tegning {
+    object-fit: contain;
+    height: 100%;
+    width: 70%;
+  }
+
+  .bildebox_landing {
+    height: 22em;
+    display: flex;
+    justify-content: center;
+  }
+
+  /*Footer*/
+
+  footer {
+    background-color: #363636;
+    color: #F7F7F7;
+    line-height: 150%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 3.5em 1em;
+    font-family: 'Noto Sans', sans-serif;
+    gap: 2em;
+  }
+
+  .nav_footer {
+    list-style-type: none;
+  }
+
+
+
+    /*Underside - hjem*/
+
+  .om_meg {
+    padding: 3em 1em;
+    background-color: #E6E6E6;
+  }
+
+ 
+  .tokolonne_innholdtest {
+    padding: 1em 0em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .avsnittsrad {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  
+
+  .ferdigheter {
+    padding: 3em 1em;
+  }
+
+  .ferdigheter_liste {
+    padding: 1em 0em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .avsnittsrad_ferdigheter{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  
+
+  .egenskaper {
+    padding: 3em 1em;
+    background-color: #E6E6E6;
+  }
+
+  /* Underside - Prosjekter */
+
+  .prosjekt {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .prosjekter div:hover {
+    text-decoration: underline;
+  }
+
+  .bildebox_prosjektliste {
+    height: 18em;
+  }
+
+  .prosjektbilde_thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .prosjektbeskrivelse_thumbnail {
+    padding: 2em 1em;
+  }
+
+  .prosjektbeskrivelse_thumbnail p {
+    padding: 1em 0em;
+  }
+
+  .partall {
+    background-color: #E6E6E6;
+  }
+
+  /* Underside - Prosjekt */
+
+  .designbeskrivelse {
+    background-color: #E6E6E6;
+    padding: 3em 1em;
+  }
+
+  .designbeskrivelse_tokolonne_innhold {
+    padding-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .bildeseksjon_prosjektbeskrivelse {
+    padding: 3em 1em;
+  }
+
+  .bilder_av_prosjekt {
+    padding-top: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em; /*Denne må være lik som bildekolonne*/
+  }
+
+  .bildekolonne {
+    display: flex;
+    flex-direction: column;
+    gap: 1em; /*Denne må være lik som bilder_av_prosjekt*/
+  }
+
+  .bildetekst {
+    padding-top: 0.5em;
+    padding-bottom: 1.5em;
+  }
+
+  .bilde_og_bildetekst {
+    display: flex;
+    flex-direction: column;  /*SATTE DENNE INN NÅ 5/5*/
+  }
+
+  /* Underside - CV */
+
+  .utdanning {
+    padding: 3em 1em;
+  }
+
+  .utdanning_rad {
+    padding-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  .utdanning_rad li {
+    font-family: 'Roboto', sans-serif;
+    line-height: 150%;
+    font-size: 16px;
+  }
+
+  .utdanning_kolonne {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .arbeidserfaring {
+    background-color: #E6E6E6;
+    padding: 3em 1em;
+  }
+
+  .arbeidserfaring_rad {
+    padding-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  .arbeidserfaring_kolonne {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Underside - Kontakt meg */
+
+  .kontakt {
+    padding: 3em 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .kontakt_metoder li {
+    list-style: none;
+  }
+
+ .kontakt_metoder a {
+  color:#363636
+ }
+
+ .melde {
+  background-color: #E6E6E6;
+  padding: 3em 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+ }
+
+ .bildebox_melde {
+  height: 19em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3em 0em
+ }
+
+ .bilde_melde {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+ }
+
+ .noea_melde h2 {
+  padding-bottom: 0.5em;
+ }
+
+button {
+  background-color: #E6E6E6;
+  font-family: 'Noto Sans', sans-serif;
+  border-radius: 5px;
+  border: 2.5px solid #363636;
+  height: 3.5em;
+  width: 15em;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #363636;
+  color: #E6E6E6;
+  transition-duration: 0.4s;
+}
+
+.sendmail_knapp {
+  padding-top: 1.5em;
+}
+
+
+
+
+
+
+
+  /*Tablet størrelse*/
+
+  @media all and (min-width: 650px) {
+
+    h1 {
+      font-size: 38px;
+    }
+
+    h2 {
+      font-size: 32px;
+    }
+
+    .landing {
+      line-height: 390%;
+    }
+
+    section h2 {
+      padding-bottom: 0.3em;
+    }
+
+    h3 {
+      font-size: 20px;
+    }
+
+      /*Tablet menu*/
+
+
+      .menu {
+        justify-content: center;
+      }
+
+      .menu li a {
+        padding: 1em 2em;
+      }
+  
+  
+      .logo {
+        flex: 1;
+        font-size: 22px;
+      }
+  
+  
+      .toggle {
+        flex: 1;
+        text-align: right;
+      }
+
+      /* Footer */
+
+      footer {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 3em 3em;
+        gap: 0;
+      }
+
+      /* Underside - hjem */
+
+      .om_meg {
+        padding: 6em 6em;
+      }
+
+      .tokolonne_innholdtest {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2em;
+        padding: 1em 0em;
+
+      }
+
+      .tokolonne_innholdtest p {
+        width: 50%;
+      }
+
+  
+      .avsnittsrad {
+        display: flex;
+        flex-direction: row;
+        gap: 4em;
+      }
+
+      .ferdigheter {
+        padding: 6em 6em;
+      }
+
+      .ferdigheter_liste {
+        gap: 2em;
+      }
+
+      .avsnittsrad_ferdigheter {
+        flex-direction: row;
+        gap: 4em;
+      }
+
+      .ferdighet {
+        width: 50%;
+      }
+
+      .egenskaper {
+        padding: 6em 6em;
+      }
+
+      /* Underside - Prosjekter */
+
+
+      .prosjekt {
+        flex-direction: row;
+        align-items: center;
+        padding: 6em 4em;
+        gap: 4em;
+      }
+
+      .bildebox_prosjektliste {
+        width: 50%;
+        height: 16em;
+      }
+
+      .prosjektbeskrivelse_thumbnail {
+        width: 50%;
+      }
+
+      /* Underside - Prosjekt */
+
+      .designbeskrivelse {
+        padding: 6em 6em;
+      }
+
+      .designbeskrivelse_tokolonne_innhold {
+        gap: 4em;
+        flex-direction: row;
+      }
+
+      .bildeseksjon_prosjektbeskrivelse {
+        padding: 6em 4em;
+      }
+
+   
+      .bildekolonne {
+        flex-direction: row;
+        gap: 4em
+      }
+    
+      .bildebox_utklipp {
+        height: 25em;
+      }
+
+      .bilde_og_bildetekst {
+        width: 50%;
+      }
+
+      .avsnittsrekke {
+        width: 50%;
+      }
+
+      /* Underside - CV */
+
+  
+      .utdanning {
+        padding: 6em 6em;
+      }
+
+      .utdanning_rad {
+        gap: 3em;
+      }
+
+      .utdanning_kolonne h3 {
+        width: 60%;
+      }
+
+      .utdanning_kolonne {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .utdanning_kolonne h3 {
+        width: 50%;
+      }
+
+      .utdanning_kolonne ul {
+        width: 50%;
+      }
+
+      .arbeidserfaring {
+        padding: 6em 6em;
+      }
+
+      .arbeidserfaring_rad {
+        gap: 3em;
+      }
+
+      .arbeidserfaring_kolonne {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .arbeidserfaring_kolonne p {
+        width: 40%;
+      }
+
+      .jobtittel_tid {
+        width: 60%;
+      }
+
+      /* Underside - Kontakt meg!*/
+
+      .kontakt {
+      flex-direction: row;
+      padding: 6em 6em;
+      align-items: center;
+      gap: 2em;
+      justify-content: space-between;
+      }
+
+      .kontakt_metoder p {
+        font-size: 22px;
+      }
+
+      .kontakt h2 {
+        width: 50%;
+      }
+
+      .melde {
+        padding: 6em 6em;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .bildebox_melde {
+        padding: 0em 0em;
+        margin-left: 0em;
+        margin-right: 0em;
+      }
+
+      button {
+        height: 4em;
+      }
+
+  }
+
+
+  /* Desktop storrelse */
+
+  @media all and (min-width: 960px) {
+
+    h1 {
+      font-size: 50px;
+    }
+
+    h2 {
+      font-size: 42px;
+    }
+
+    .landing {
+      line-height: 450%;
+    }
+
+    section h2 {
+      font-size: 44px;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+
+    .menu {
+        flex-wrap: nowrap;
+        background: none;
+        align-items: center;
+      }
+      
+      .menu li a {
+        padding: 1em 2em;
+
+      }
+
+      footer {
+        padding: 4em 3em;
+      }
+
+      .linker_footer {
+        font-size: 18px;
+      }
+
+  
+      .logo {
+        order: 0;
+        font-size: 26px;
+      }
+  
+  
+      .item {
+        order: 1;
+        position: relative;
+        display: block; /*Her gjør vi slik at menyen vises når man når denne skjermstørrelsen*/
+        width: auto;
+        font-size: 18px;
+      }
+  
+  
+      .toggle {
+        display: none; /*Her tar vi bort hamburgeren*/
+      }
+    
+
+      /* Underside - Hjem */
+
+      .om_meg {
+        padding: 7em 16em;
+      }
+
+      .tokolonne_innholdtest {
+        gap: 4em;
+      }
+
+      .ferdigheter {
+        padding: 7em 16em;
+      }
+
+      .ferdigheter_liste {
+        gap: 4em;
+      }
+
+      .egenskaper {
+        padding: 7em 16em;
+      }
+
+      /* Underside - Prosjekter */
+
+      .prosjekt {
+        padding: 7em 16em;
+      }
+
+      .bildebox_prosjektliste {
+        width: 50%;
+        height: 18em;
+      }
+
+      /* Underside - Prosjekt */
+
+      .designbeskrivelse {
+        padding: 7em 16em;
+      }
+
+      .designbeskrivelse_tokolonne_innhold {
+        gap: 5em;
+      }
+
+      .bildeseksjon_prosjektbeskrivelse {
+        padding: 6em 8em;
+      }
+
+      .bildekolonne {
+        gap: 6em;
+      }
+
+      .bildebox_utklipp {
+        height: 28em;
+      }
+
+      /* Underside - CV */
+
+      h4 {
+        font-size: 20px;
+      }
+
+      .utdanning {
+        padding: 7em 16em;
+      }
+
+      .utdanning_kolonne li {
+        font-size: 18px;
+      }
+
+      .arbeidserfaring {
+        padding: 7em 16em;
+      }
+
+
+      /* Underside - Kontakt */
+
+      .kontakt {
+        padding: 7em 16em;
+      }
+
+      .kontakt_metoder p {
+        font-size: 24px;
+      }
+
+      .melde {
+        padding: 4em 16em;
+      }
+
+      button {
+        font-size: 18px;
+      }
+
+
+  }
