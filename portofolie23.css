@@ -372,6 +372,7 @@ button {
   height: 3.5em;
   width: 15em;
   font-size: 16px;
+  color: #363636;
 }
 
 button:hover {
@@ -384,9 +385,6 @@ button:hover {
   padding-top: 1.5em;
 }
 
-.sendmail_knapp a {
-  color: #363636;
-}
 
   /*Tablet størrelse*/
 
