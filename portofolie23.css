@@ -507,6 +507,10 @@ button:hover {
         width: 50%;
       }
 
+      .prosjektbeskrivelse_thumbnail a {
+        color: #363636
+      }
+
       /* Underside - Prosjekt */
 
       .designbeskrivelse {

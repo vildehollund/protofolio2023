@@ -45,6 +45,7 @@ window.onscroll = function() { /*Hver gang du scroller blir denne funksjonen kal
 
   if (lastScroll == 0) { /*Sjekk for å se om du står på toppen av siden*/
     body.classList.remove("scroll-up")
+    body.classList.add("scroll-top")
   }
 }
 
